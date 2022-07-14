@@ -1,4 +1,4 @@
-namespace DSpirit.Web
+namespace umbraco.web.ui
 {
     public class Program
     {

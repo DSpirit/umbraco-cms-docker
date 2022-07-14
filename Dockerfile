@@ -1,6 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
-ENV PROJECT=DSpirit.Web
+ARG PROJECT
+
+ENV PROJECT=${PROJECT}
 
 COPY . .
 
