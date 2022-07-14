@@ -1,14 +1,14 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
-ENV PROJECT=DSpirit.Web
-
 WORKDIR /DSpirit.Web
+
+ENV PROJECT=DSpirit.Web
 
 COPY . .
 
-RUN dotnet restore .
+RUN dotnet restore ${PROJECT}.csproj
 
-RUN dotnet publish . --configuration Release --no-restore --output /app
+RUN dotnet publish ${PROJECT}.csproj --configuration Release --no-restore --output /app
 
 ########################
 ### final
